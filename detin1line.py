@@ -1,1 +1,1 @@
-print((lambda f: (lambda m: f(f, m)))(lambda self, m: m[0][0] if len(m) == 1 else sum((-1) ** c * m[0][c] * self(self, [row[:c] + row[c + 1:] for row in m[1:]]) for c in range(len(m))))([[int(i) for i in input().split()] for _ in range(int(input("Enter size of a square matrix:")))]))
+print("det =", (lambda f: (lambda m: f(f, m)))(lambda self, m: m[0][0] if len(m) == 1 else sum((-1) ** c * m[0][c] * self(self, [row[:c] + row[c + 1:] for row in m[1:]]) for c in range(len(m))))([[int(i) for i in input().split()] for _ in range(int(input("Enter size of a square matrix:")))]))
